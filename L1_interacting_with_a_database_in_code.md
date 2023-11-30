@@ -31,15 +31,39 @@ Review of useful commands
 
 ## 6	[Project Setup](https://launchschool.com/lessons/10f7102d/assignments/2090528a)
 
-## 7	Database Design	Not completed
-8	Listing Expenses	Not completed
-9	Displaying Help	Not completed
-10	Adding Expenses	Not completed
-11	Handling Parameters Safely	Not completed
-12	Code Structure	Not completed
-13	Searching Expenses	Not completed
-14	Deleting Expenses	Not completed
-15	Clearing Expenses	Not completed
-16	Counting and Totaling Expenses	Not completed
-17	Creating the Schema Automatically	Not completed
-18	Summary
+## 7	[Database Design](https://launchschool.com/lessons/10f7102d/assignments/796f407c)
+
+## 8	[Listing Expenses](https://launchschool.com/lessons/10f7102d/assignments/772b1386)	
+
+## 9	[Displaying Help](https://launchschool.com/lessons/10f7102d/assignments/fa215da5)
+
+- 
+
+## 10 [Adding Expenses](https://launchschool.com/lessons/10f7102d/assignments/c54b083f)
+
+
+
+## 11	[Handling Parameters Safely](https://launchschool.com/lessons/10f7102d/assignments/6877d345)
+
+
+
+## 12 [Code Structure](https://launchschool.com/lessons/10f7102d/assignments/bfc4ac83)
+
+
+## 13	[Searching Expenses](https://launchschool.com/lessons/10f7102d/assignments/e4a48665)
+
+
+## 14	[Deleting Expenses](https://launchschool.com/lessons/10f7102d/assignments/59094a8d)
+
+
+## 15	[Clearing Expenses](https://launchschool.com/lessons/10f7102d/assignments/78571424)
+
+
+## 16	[Counting and Totaling Expenses](https://launchschool.com/lessons/10f7102d/assignments/53f46b39)
+
+
+
+## 17	[Creating the Schema Automatically](https://launchschool.com/lessons/10f7102d/assignments/99b9d97f)
+
+
+## 18	[Summary](https://launchschool.com/lessons/10f7102d/assignments/e40ff3e1)
