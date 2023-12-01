@@ -156,14 +156,131 @@ SELECT * FROM expenses ORDER BY created_on DESC;
 
 ## 9	[Displaying Help](https://launchschool.com/lessons/10f7102d/assignments/fa215da5)
 
-- 
+```sql
+#! /usr/bin/env ruby
+
+require "pg"
+
+def list_expenses
+  connection = PG.connect(dbname: "expenses")
+
+  result = connection.exec("SELECT * FROM expenses ORDER BY created_on ASC")
+  result.each do |tuple|
+    columns = [ tuple["id"].rjust(3),
+                tuple["created_on"].rjust(10),
+                tuple["amount"].rjust(12),
+                tuple["memo"] ]
+
+    puts columns.join(" | ")
+  end
+end
+
+def display_help
+  puts <<~HELP
+    An expense recording system
+
+    Commands:
+
+    add AMOUNT MEMO - record a new expense
+    clear - delete all expenses
+    list - list all expenses
+    delete NUMBER - remove expense with id NUMBER
+    search QUERY - list expenses with a matching memo field
+  HELP
+end
+
+command = ARGV.first
+if command == "list"
+  list_expenses
+else
+  display_help
+end
+```
 
 ## 10 [Adding Expenses](https://launchschool.com/lessons/10f7102d/assignments/c54b083f)
 
+```expenses
+#! /usr/bin/env ruby
 
+require 'pg'
+require 'date'
+
+CONNECTION = PG.connect(dbname: "rb185_projects")
+
+def list_expenses
+  results = CONNECTION.exec("SELECT * FROM expenses ORDER BY created_on ASC")
+  results.each do |tuple|
+    columns = [ tuple["id"].rjust(3),
+                tuple["created_on"].rjust(10),
+                tuple["amount"].rjust(12),
+                tuple["memo"]]
+    puts columns.join(" | ")
+  end
+end
+
+def display_help
+  puts <<~HELP
+  An expense recording system
+
+  Commands:
+  
+  add AMOUNT MEMO - record a new expense
+  clear - delete all expenses
+  list - list all expenses
+  delete NUMBER - remove expense with id NUMBER
+  search QUERY - list expenses with a matching memo field
+  HELP
+end
+
+def add_expense(amount, memo)
+  date = Date.today
+  sql = "INSERT INTO expenses (amount, memo, created_on) VALUES (#{amount}, '#{memo}', '#{date}')"
+  CONNECTION.exec(sql)
+end
+
+command = ARGV.first
+if command == "list"
+  list_expenses
+elsif command == "add"
+  amount = ARGV[1]
+  memo = ARGV[2]
+  abort "You must provide an amount and memo." unless amount && memo
+  add_expense(amount, memo)
+else
+  display_help
+end
+```
+
+- An explanation of how misplaced apostrophes are a common bug which can allow for SQL injection hacks.
 
 ## 11	[Handling Parameters Safely](https://launchschool.com/lessons/10f7102d/assignments/6877d345)
 
+- 'sanitize your inputs'
+- The following malicious code is an example of a SQL injection to delete all data:
+  - `$ ./expense add 0.01 "', '2015-01-01'); DROP TABLE expenses; --"`
+- PostgreSQL provides a way to guard against this:
+  - `pg` adopts this with the method `PG::Connection#exec_params` rather than `PG::Connection#exec`
+- THIS IS THE BIT ABOUT $1 as a variable.
+- For example:
+  - `connection.exec_params("SELECT 1 + $1", [1]).values` => `[["2"]]`
+  - `connection.exec_params("SELECT upper($1)", ["test"]).values` => `[["TEST"]]`
+  - `connection.exec_params("SELECT position($1 in $2)", ["t", "test"]).values` => `[["1"]]`
+
+- Practice problem 1:
+  - `connection.exec_params("SELECT position($1 in $2)", ["test"]).values` returns the following error:
+  -  `(irb):7:in `exec_params': ERROR:  bind message supplies 1 parameters, but prepared statement "" requires 2 (PG::ProtocolViolation)`
+- Practice problem 2: Update the `add_expense` method to use the `exec_params` method:
+
+```
+def add_expense(amount, memo)
+  date = Date.today
+  sql = "INSERT INTO expenses (amount, memo, created_on) VALUES ($1, $2, $3)"
+  CONNECTION.exec_params(sql, [amount, memo, date])
+end
+```
+- Practice problem 3: What happens when malicious code is entered into a query now:
+  - `INSERT INTO expenses (amount, memo, created_on) VALUES (0.01, '', '2015-01-01'); DROP TABLE expenses; --', '')`
+    -   => `  1 | 2016-06-22 |         0.01 | ', '2015-01-01'); DROP TABLE expenses; --`
 
 
 ## 12 [Code Structure](https://launchschool.com/lessons/10f7102d/assignments/bfc4ac83)
