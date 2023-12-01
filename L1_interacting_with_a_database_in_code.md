@@ -285,6 +285,21 @@ end
 
 ## 12 [Code Structure](https://launchschool.com/lessons/10f7102d/assignments/bfc4ac83)
 
+- video [3:59]
+
+![Screenshot 2023-12-01 at 12 29 06](https://github.com/SandyRodger/RB185-RB189/assets/78854926/42392f7f-1529-459f-bd6d-eae1f0e9c81f)
+
+- The command line is the starting point.
+- It'll use a `CLI` class to parse/process arguments passed by the user to the program
+- `ExpenseData` class.
+  - communicate with the database 
+    - (send and receive SQL queries)
+  - Format and display results.
+    - These 2 jobs might be 2 classes in a larger program.
+    - Doesn't send data back to CLI class, it displays it directly.
+-This structure is pretty common for a Ruby Command-line program.
+  - A single class that takes input and processes it
+  - Method calls are made on a second object, that deals with the business-application.
 
 ## 13	[Searching Expenses](https://launchschool.com/lessons/10f7102d/assignments/e4a48665)
 
