@@ -78,16 +78,81 @@ Review of useful commands:
 
 ## 5 [Project Demo](https://launchschool.com/lessons/10f7102d/assignments/1ca9b617)
 
-- Expenses app
-- Add an expense:
-  -  `./expense add 4.56 Coffee`
-  -   `./expense add 9.23 "Lunch with client"`
+- Video[4:34]
+- A small CL app that uses a PostgreSQL database to store data about expenses.
+- This video just shows how it works. In later videos we'll build it.
+  - `./expense` to run the executable
+  - Add an expense:
+    -  `./expense add 4.56 Coffee`
+    -   `./expense add 9.23 "Lunch with client"`
+    -   `./expense list`
+    -   `./expense search "coffee`
 
 ## 6	[Project Setup](https://launchschool.com/lessons/10f7102d/assignments/2090528a)
 
+- Setting up everything from scratch.
+  - Create directory (`01_expenses_project`)
+  - Create `Gemfile` with `pg` gem.
+  - `bundle install`
+  - Create main app file `expense`
+  - Add "hash-bang" `#! /use/bin/env ruby`
+  - Add execute permission to `execute` : `chmod +x expense`
+  - Require `pg`
+  - Add code to `expense`
+  - test program with `./expense`
+
 ## 7	[Database Design](https://launchschool.com/lessons/10f7102d/assignments/796f407c)
 
+- `createdb rb185_project` (meta-command)
+- `\c rb185_project`
+
+```sql
+CREATE TABLE expenses (
+  id serial PRIMARY KEY,
+  amount numeric(6,2) NOT NULL,
+  memo text NOT NULL,
+  created_on date NOT NULL
+);
+
+INSERT INTO expenses(amount, memo, created_on) VALUES
+(9999.99, 'this is the largest possible value', '2023-11-29');
+
+INSERT INTO expenses(amount, memo, created_on) VALUES
+(10000.00, 'this is too large', '2023-11-29');
+
+INSERT INTO expenses(amount, memo, created_on) VALUES
+(-9999.99, 'this is the smallest possible value', '2023-11-29');
+
+INSERT INTO expenses(amount, memo, created_on) VALUES
+(-10000.00, 'this value''s too small', '2023-11-29');
+
+DELETE FROM expenses WHERE amount < 0;
+ALTER TABLE expenses ADD CONSTRAINT amount_positive_value CHECK (amount BETWEEN 0 AND 9999.99);
+ALTER TABLE expenses ADD CONSTRAINT positive_amount CHECK (amount >= 0.01);
+```
+
 ## 8	[Listing Expenses](https://launchschool.com/lessons/10f7102d/assignments/772b1386)	
+
+```sql
+INSERT INTO expenses (amount, memo, created_on) VALUES (14.56, 'Pencils', NOW());
+INSERT INTO expenses (amount, memo, created_on) VALUES (3.29, 'Coffee', NOW());
+INSERT INTO expenses (amount, memo, created_on) VALUES (49.99, 'Text Editor', NOW());
+
+DELETE FROM expenses WHERE id = 1;
+SELECT * FROM expenses ORDER BY created_on DESC;
+```
+
+```expense
+  db = PG.connect(dbname: "rb185_projects")
+  results = db.exec("SELECT * FROM expenses ORDER BY created_on ASC")
+  results.each do |tuple|
+    columns = [ tuple["id"].rjust(3),
+                tuple["created_on"].rjust(10),
+                tuple["amount"].rjust(12),
+                tuple["memo"]]
+    puts columns.join(" | ")
+  end
+```
 
 ## 9	[Displaying Help](https://launchschool.com/lessons/10f7102d/assignments/fa215da5)
 
