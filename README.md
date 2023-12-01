@@ -49,7 +49,7 @@
 
 ## Overview
 
-|  | 1st: skim | 2nd: deep-dive | 3rd: find/fill gaps |
+|  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
 | :--- | :---: | :---: | :---: | 
 | L1 | 29.11.23 |||
 | L2 | 30.11.23 |||
