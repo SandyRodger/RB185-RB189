@@ -374,15 +374,151 @@ CLI.new.run(ARGV)
 
 - Implementing the `search` method.
 
+```
+#! /usr/bin/env ruby
+
+require 'pg'
+require 'date'
+
+class CLI
+
+  attr_reader :db_object
+
+  def initialize
+    @db_object = ExpenseData.new
+  end
+
+  def run(argv)
+    command = argv.first
+    case command
+    when "list"
+      db_object.list_expenses
+    when "add"
+      amount = argv[1]
+      memo = argv[2]
+      abort "You must provide an amount and memo." unless amount && memo
+      db_object.add_expense(amount, memo)
+    when "search"
+      memo = argv[1]
+      db_object.search_expense(memo)
+    else
+      display_help
+    end
+  end
+
+  private
+
+  def display_help
+    puts <<~HELP
+    An expense recording system
+  
+    Commands:
+    
+    add AMOUNT MEMO - record a new expense
+    clear - delete all expenses
+    list - list all expenses
+    delete NUMBER - remove expense with id NUMBER
+    search QUERY - list expenses with a matching memo field
+    HELP
+  end
+
+end
+
+class ExpenseData
+
+  attr_reader :connection
+
+  def initialize
+    @connection = PG.connect(dbname: "rb185_projects")
+  end
+
+  def search_expense(memo)
+    sql = "SELECT * FROM expenses WHERE memo ILIKE $1"
+    results = connection.exec_params(sql, [memo])
+    display_expenses(results)
+  end
+
+  def list_expenses
+    results = connection.exec("SELECT * FROM expenses ORDER BY created_on ASC")
+    results.each do |tuple|
+      columns = [ tuple["id"].rjust(3),
+                  tuple["created_on"].rjust(10),
+                  tuple["amount"].rjust(12),
+                  tuple["memo"]]
+      puts columns.join(" | ")
+    end
+  end
+
+  def add_expense(amount, memo)
+    date = Date.today
+    sql = "INSERT INTO expenses (amount, memo, created_on) VALUES ($1, $2, $3)"
+    connection.exec_params(sql, [amount, memo, date])
+  end
+
+  private
+
+  def display_expenses(expenses)
+    expenses.each do |tuple|
+      columns = [ tuple["id"].rjust(3),
+                  tuple["created_on"].rjust(10),
+                  tuple["amount"].rjust(12),
+                  tuple["memo"]]
+      puts columns.join(" | ")
+    end
+  end
+end
+
+CLI.new.run(ARGV)
+```
 
 ## 14	[Deleting Expenses](https://launchschool.com/lessons/10f7102d/assignments/59094a8d)
 
+- delete rows by their `id` number
+
+```
+ def delete_expense(id)
+    sql = "SELECT * FROM expenses WHERE id = $1"
+    result = @connection.exec_params(sql, [id])
+
+    if result.ntuples == 1
+      sql = "DELETE FROM expenses WHERE id=$1"
+      @connection.exec_params(sql, [id])
+
+      puts "The following expense has been deleted:"
+      display_expenses(result)
+    else
+      puts "There is no expense with the id '#{id}'."
+    end
+  end
+```
 
 ## 15	[Clearing Expenses](https://launchschool.com/lessons/10f7102d/assignments/78571424)
 
+- Write a method `clear` which will delete all the entries in the `expenses` table.
+
+```
+require "io/console"
+```
+
+ and
+ 
+```
+ def delete_all_expenses
+    @connection.exec("DELETE FROM expenses")
+    puts "All expenses have been deleted."
+  end
+```
+
+and
+
+```
+    when "clear"
+      puts "This will remove all expenses. Are you sure? (y/n)"
+      response = $stdin.getch
+      @application.delete_all_expenses if response == "y"
+```
 
 ## 16	[Counting and Totaling Expenses](https://launchschool.com/lessons/10f7102d/assignments/53f46b39)
-
 
 
 ## 17	[Creating the Schema Automatically](https://launchschool.com/lessons/10f7102d/assignments/99b9d97f)
