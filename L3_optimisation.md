@@ -29,4 +29,19 @@
 ## [Pushing Down Operations to the Database](https://launchschool.com/lessons/ce10b313/assignments/bb9d2366)
 
 - video [13:50]
+- `list_complete?` method
+  - Where is this list hash coming from?
+  - The returning hash has differing keys.
+- How to refactor out any duplication.
+- It's a lot more efficient for you to count things in SQL rather than in Ruby.
+- `tuple_to_list_hash`
+
+## [Summary](https://launchschool.com/lessons/ce10b313/assignments/4065e279)
+
+- How N+1 queries are a result of performing an additional query for each element in a collection.
+- How to move business logic from Ruby into the database by adding to a query's select list.
+- How making database interactions more efficient often involves making SQL queries more specialized.
+
+## [Quiz](https://launchschool.com/lessons/ce10b313/assignments/465e198a)
+
 - 
