@@ -5,6 +5,7 @@
 - 2 [Getting Started](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#2getting-started)
 - 3 [What to Focus On](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#3what-to-focus-on)
 - 4 [Executing SQL Statements from Ruby](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#4executing-sql-statements-from-ruby)
+  - [tuple](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#tuple)
 - 5 [Project Demo](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#5-project-demo)
 - 6 [Project Setup](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#6project-setup)
 - 7 [Database Design](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md#7database-design)
@@ -51,7 +52,7 @@
 
 |  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
 | :--- | :---: | :---: | :---: | 
-| L1 | 29.11.23 |||
+| L1 | 29.11.23 |2.12.23||
 | L2 | 30.11.23 |||
 | L3 | 30.11.23 |||
 | L4 ||||
