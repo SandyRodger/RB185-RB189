@@ -520,9 +520,61 @@ and
 
 ## 16	[Counting and Totaling Expenses](https://launchschool.com/lessons/10f7102d/assignments/53f46b39)
 
+- In `seach_expenses` and `list_expenses` insert:
 
+```
+    display_count(result)
+    display_expenses(result) if result.ntuples > 0
+```
+
+```
+ def display_count(expenses)
+    count = expenses.ntuples
+    if count == 0
+      puts "There are no expenses."
+    elsif count == 1
+      puts "There is 1 expense."
+    else
+      puts "There are #{count} expenses."
+    end
+  end
+```
+
+- At the end of the `display_expenses` method:
+```
+ puts "-" * 50
+
+    amount_sum = expenses.field_values("amount").map(&:to_f).inject(:+)
+
+    puts "Total #{format('%.2f', amount_sum.to_s).rjust(25)}"
+```
 ## 17	[Creating the Schema Automatically](https://launchschool.com/lessons/10f7102d/assignments/99b9d97f)
 
+```sql
+ def setup_schema
+    result = @connection.exec <<~SQL
+      SELECT COUNT(*) FROM information_schema.tables
+      WHERE table_schema = 'public' AND table_name = 'expenses';
+    SQL
+
+    if result[0]["count"] == "0"
+      @connection.exec <<~SQL
+        CREATE TABLE expenses (
+          id serial PRIMARY KEY,
+          amount numeric(6,2) NOT NULL CHECK (amount >= 0.01),
+          memo text NOT NULL,
+          created_on date NOT NULL
+        );
+      SQL
+    end
+  end
+```
 
 ## 18	[Summary](https://launchschool.com/lessons/10f7102d/assignments/e40ff3e1)
-![image](https://github.com/SandyRodger/RB185-RB189/assets/78854926/4f3db239-c791-43f3-8a12-531232040a74)
+
+- `pg` for:
+  - creating a new `PG::Connection` object
+  - Executing SQL statements using `#exec` and `#exec_params`
+  - Accessubg query results contained in `PG::result` object.
+- Build a small command-line Ruby application
+- Automatically create tables if they don't exist.
