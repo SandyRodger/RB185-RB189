@@ -2,7 +2,6 @@ require "sinatra"
 require "sinatra/reloader"
 require "sinatra/content_for"
 require "tilt/erubis"
-require "byebug"
 
 # require_relative "public/session_persistence"
 require_relative "database_persistence"
@@ -210,4 +209,8 @@ post "/lists/:id/complete_all" do
 
   session[:success] = "All todos have been completed."
   redirect "/lists/#{@list_id}"
+end
+
+after do
+  @storage.disconnect
 end
