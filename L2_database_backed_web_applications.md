@@ -145,7 +145,19 @@ end
 
 ## 13	[Deploying PG Applications to Heroku](https://launchschool.com/lessons/421e2d1e/assignments/54681a23)
 
-- 
+```
+heroku apps:create rb185-todos-rodger
+bundle lock --add-platform x86_64-linux
+heroku addons:create heroku-postgresql:mini -a rb185-todos-rodger
+heroku pg:psql -a rb185-todos-rodger < schema.sql
+heroku git:remote -a rb185-todos-rodger
+git add .
+git commit -am "make it better"
+git push heroku master
+git push heroku main
+```
+
+- I had some issues to muddle through here.
 
 ## 14 [Summary](https://launchschool.com/lessons/421e2d1e/assignments/0981ae77)
 
