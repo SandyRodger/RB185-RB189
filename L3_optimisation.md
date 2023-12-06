@@ -36,6 +36,11 @@
 - It's a lot more efficient for you to count things in SQL rather than in Ruby.
 - `tuple_to_list_hash`
 
+- We have in this lesson:
+  - continued to move counting functionality into the db. Remove some helper methods. Move business logic into the db
+  - Standardized the way the list hashes are used. This makes them simpler.
+  - Changed the way that we load data into the todo-lists page. By creating @todos and @list instance variables.
+
 ## [Summary](https://launchschool.com/lessons/ce10b313/assignments/4065e279)
 
 - How N+1 queries are a result of performing an additional query for each element in a collection.
