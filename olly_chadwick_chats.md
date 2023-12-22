@@ -14,4 +14,5 @@ to discuss:
 
 Next:
 
-- why does my css take so long to apply?
+- Am i doing this:
+  - Display appropriate flash error messages when the user does something incorrectly. Don't fail silently, and don't rely on built-in errors from Sinatra, Rack, other packages, or a plain text error page that lacks controls such as a 404 Not Found error from your browser.![image](https://github.com/SandyRodger/RB185-RB189/assets/78854926/ff5309ca-a05b-4a7d-a847-aa0a3b90eceb)
