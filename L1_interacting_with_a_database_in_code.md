@@ -12,7 +12,7 @@
 - We'll learn:
   - Connecting to PostgreSQL from Ruby.
   - Using the `pg` gem to perform queries.
-  - buidling dynamic SQL statements safely.
+  - building dynamic SQL statements safely.
   - structuring small command-line applications
   - Optimize queries made from Ruby programs
  
@@ -26,7 +26,7 @@
 - Understand how to dynamically generate SQL.
   - When we make SQL queries from Ruby there are inherent risks.
 - Focus on the database and not the application.
-  - We'll build a command line app here. It's nice, but not the thing we're learnign to do. Focus more on the database interaction. That's the nugget.
+  - We'll build a command line app here. It's nice, but not the thing we're learning to do. Focus more on the database interaction. That's the nugget.
 
 ## 4	[Executing SQL Statements from Ruby](https://launchschool.com/lessons/10f7102d/assignments/003e5e30)
 
@@ -39,7 +39,7 @@
   - `cd result`
   - `ls`
 ### Tuple
-  - [4:20] A tuple is a Ruby-hash rather than alist of values (which is the more common meaning of 'tuple')
+  - [4:20] A tuple is a Ruby-hash rather than a list of values (which is the more common meaning of 'tuple')
   - `result = db.exec "SELECT * FROM films;"`
     - (never pass multiple queries to exec at a time)
   - `result.values`
