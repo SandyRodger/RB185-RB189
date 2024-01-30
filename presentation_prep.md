@@ -57,20 +57,20 @@ Formal Presentation : 15- 20 mins OR 20 - 30 minutes ? (20 mins is the only safe
 
 ## My checklist
 
-| topic |
-| :---: |
-|Writing Sinatra applications
-|Writing ERB code
-|Using view variables and helpers
-|Using and writing routes
-|Sessions and persistence
-|Using SQL
-|Optimizing SQL queries
-|Validation and Flash messages
-|Using static assets
-|Working with the request/response cycle
-|Know how and when to use GET and POST requests correctly
-|Using redirects properly
-|Maintaining state
-|Understand and know how to mitigate security risks that can affect HTTP and SQL
+| topic | date studied |
+| :---: | :---: |
+|Writing Sinatra applications |
+|Writing ERB code |
+|Using view variables and helpers |
+|Using and writing routes |
+|Sessions and persistence |
+|Using SQL |
+|Optimizing SQL queries |
+|Validation and Flash messages |
+|Using static assets |
+|Working with the request/response cycle |
+|Know how and when to use GET and POST requests correctly |
+|Using redirects properly |
+|Maintaining state |
+|Understand and know how to mitigate security risks that can affect HTTP and SQL |
 
