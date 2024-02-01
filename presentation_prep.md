@@ -37,6 +37,28 @@ Using redirects properly
 Maintaining state
 Understand and know how to mitigate security risks that can affect HTTP and SQL
 
+## [4. Project]
+
+Presentation Assessment Requirements
+
+You will use this project in the RB189 presentation assessment. You should prepare your presentation before scheduling the presentation. Be sure to consider the presentation requirements as you work on your project:
+
+- The presentation should last between 15 and 20 minutes. Be sure to rehearse your presentation beforehand to ensure you're not going to fall short or go over the time limit. Do not rehearse your presentation with other Launch School students.
+- The presentation will be conducted using Zoom or similar software with screen sharing.
+- If you decide to do a live demonstration of your project, you will also need your browser.
+- Your presentation should include slides (3 minimum). You can use something like Powerpoint, Keynote, Google Slides, or any other similar application.
+- You should discuss the following during your presentation:
+- What need does your application satisfy?
+- Who is the target audience?
+- How does your application satisfy that need?
+- Demonstrate the key features of your application.
+- You do not have to demonstrate all features.
+- The demonstration can be live, or it can use static screenshots.
+- How do the demonstrated features address the needs you tried to satisfy?
+- What challenges did you encounter during development?
+- What insights or lessons learned did you have during development?
+- Following the presentation, the interviewer may ask you some additional questions. The questions will be about the project and your experiences working on the project.
+
 ## [5. Study Guide: Assessment Presentation or Interview](https://launchschool.com/lessons/67daf349/assignments/9988e7f0)
 
 Study Guide for the Presentation:
@@ -55,22 +77,40 @@ TIMINGS:
 Entire assessment session : 40 -45 mins
 Formal Presentation : 15- 20 mins OR 20 - 30 minutes ? (20 mins is the only safe option)
 
-## My checklist
+## To research:
 
-| topic | date studied |
-| :---: | :---: |
-|Writing Sinatra applications |
-|Writing ERB code |
-|Using view variables and helpers |
-|Using and writing routes |
-|Sessions and persistence |
-|Using SQL |
-|Optimizing SQL queries |
-|Validation and Flash messages |
-|Using static assets |
-|Working with the request/response cycle |
-|Know how and when to use GET and POST requests correctly |
-|Using redirects properly |
-|Maintaining state |
-|Understand and know how to mitigate security risks that can affect HTTP and SQL |
+### Writing Sinatra applications
+
+- I  chose to pass information as individual path parameters, rather than using the `?rolls=2&sides=6` way. ([link](https://launchschool.com/lessons/cac53b94/assignments/4d46009e) 
+
+### Writing ERB code
+### Using view variables and helpers
+### Using and writing routes
+### Sessions and persistence
+### Using SQL
+### Optimizing SQL queries
+### Validation and Flash messages
+### Using static assets
+### Working with the request/response cycle
+### Know how and when to use GET and POST requests correctly
+### Using redirects properly
+### Maintaining state
+### Understand and know how to mitigate security risks that can affect HTTP and SQL
+### Procfiles (It shouldn't have been there, but it was)
+
+## Questions:
+
+- How long should the presentation actually be?
+- Am I using powerpoint? (Where did I see that?) Or just screen sharing from VSCode? I can't see it anywhere - it must be just screen sharing.
+- Where is 'port 4567' coming from?
+
+## To Do:
+
+- Draw a flow chart of RackUp apps
+
+## My breakdown of the assessment:
+
+18 minutes : Me giving the assessor a walk through on my gym app via zoom, with a 3 slides minimum PowerPoint presentation!
+20 minutes : The assessor asking me to explain concepts covered in the curriculum as they appear in my app.
+
 
