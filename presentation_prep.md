@@ -88,17 +88,17 @@ I reviewed:
 | Course | Lesson | when | link |
 | :---: | :---: | :---: | :---: |
 | RB175 | 1| 3.2.24 |[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md )|
-| RB175 |2||[here]()|
-| RB175 |3||[here]()|
-| RB175 |4||[here]()|
-| RB175 |5||[here]()|
-| RB175 |6||[here]()|
-| RB175 |7||[here]()|
-| RB175 |8||[here]()|
-| RB175 |9||[here]()|
-| RB185 |1||[here]()|
-| RB185 |2||[here]()|
-| RB185 |3||[here]()|
+| RB175 |2||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/02_handling_requests_manually.md)|
+| RB175 |3||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md)|
+| RB175 |4||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)|
+| RB175 |5||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
+| RB175 |6||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
+| RB175 |7||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)|
+| RB175 |8||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
+| RB175 |9||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/09_optional_projects.md)|
+| RB185 |1||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md)|
+| RB185 |2||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L2_database_backed_web_applications.md)|
+| RB185 |3||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L3_optimisation.md)|
 
 
 ### Writing ERB code
