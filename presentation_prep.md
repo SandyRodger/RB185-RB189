@@ -85,10 +85,21 @@ The presentation itself should be 15-20 minutes, but there maybe another 10-20 m
 
 I reviewed:
 
-| section | when | link |
-| :---: | :---: | :---: |
-| RB174 : 1| 3.2.24 |https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md |
-|||
+| Course | Lesson | when | link |
+| :---: | :---: | :---: | :---: |
+| RB175 | 1| 3.2.24 |https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md |
+| RB175 |2||
+| RB175 |3||
+| RB175 |4||
+| RB175 |5||
+| RB175 |6||
+| RB175 |7||
+| RB175 |8||
+| RB175 |9||
+| RB185 |1||
+| RB185 |2||
+| RB185 |3||
+
 
 ### Writing ERB code
 ### Using view variables and helpers
