@@ -74,8 +74,8 @@ The entire assessment session should last about 40-45 minutes. However, your for
 
 TIMINGS:
 
-Entire assessment session : 40 -45 mins
-Formal Presentation : 15- 20 mins OR 20 - 30 minutes ? (20 mins is the only safe option)
+The presentation itself should be 15-20 minutes, but there maybe another 10-20 minutes of questions from the interview.
+
 
 ## To research:
 
