@@ -87,18 +87,18 @@ I reviewed:
 
 | Course | Lesson | when | link |
 | :---: | :---: | :---: | :---: |
-| RB175 | 1| 3.2.24 |https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md |
-| RB175 |2||
-| RB175 |3||
-| RB175 |4||
-| RB175 |5||
-| RB175 |6||
-| RB175 |7||
-| RB175 |8||
-| RB175 |9||
-| RB185 |1||
-| RB185 |2||
-| RB185 |3||
+| RB175 | 1| 3.2.24 |[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md )|
+| RB175 |2||[here]()|
+| RB175 |3||[here]()|
+| RB175 |4||[here]()|
+| RB175 |5||[here]()|
+| RB175 |6||[here]()|
+| RB175 |7||[here]()|
+| RB175 |8||[here]()|
+| RB175 |9||[here]()|
+| RB185 |1||[here]()|
+| RB185 |2||[here]()|
+| RB185 |3||[here]()|
 
 
 ### Writing ERB code
