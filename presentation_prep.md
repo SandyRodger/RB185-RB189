@@ -83,6 +83,13 @@ The presentation itself should be 15-20 minutes, but there maybe another 10-20 m
 
 - I  chose to pass information as individual path parameters, rather than using the `?rolls=2&sides=6` way. ([link](https://launchschool.com/lessons/cac53b94/assignments/4d46009e) 
 
+I reviewed:
+
+| section | when | link |
+| :---: | :---: | :---: |
+| RB174 : 1| 3.2.24 |https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md |
+|||
+
 ### Writing ERB code
 ### Using view variables and helpers
 ### Using and writing routes
@@ -100,17 +107,18 @@ The presentation itself should be 15-20 minutes, but there maybe another 10-20 m
 
 ## Questions:
 
-- How long should the presentation actually be?
-- Am I using powerpoint? (Where did I see that?) Or just screen sharing from VSCode? I can't see it anywhere - it must be just screen sharing.
 - Where is 'port 4567' coming from?
+  - It's the standard Sinatra port. You can specify others, but if you don't this will be the one used.
 
 ## To Do:
 
-- Draw a flow chart of RackUp apps
+- Draw a flow-chart of RackUp apps
+- Go through 'to research' topics and find links for all the relevant sections.
+  - First look through your own notes.
 
 ## My breakdown of the assessment:
 
 18 minutes : Me giving the assessor a walk through on my gym app via zoom, with a 3 slides minimum PowerPoint presentation!
-20 minutes : The assessor asking me to explain concepts covered in the curriculum as they appear in my app.
+15 minutes : The assessor asking me to explain concepts covered in the curriculum as they appear in my app.
 
 
