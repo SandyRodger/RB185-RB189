@@ -85,13 +85,14 @@ The presentation itself should be 15-20 minutes, but there maybe another 10-20 m
 
 I reviewed:
 
-| Course | Lesson | when | link |
+| Course | Lesson | when finished | link |
 | :---: | :---: | :---: | :---: |
 | RB175 | 1 Intro and prerequisites| 3.2.24 |[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md )|
-| RB175 | 2 Handling Requests manually||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/02_handling_requests_manually.md)|
-| RB175 |3||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md)|
-| RB175 |4||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)|
-| RB175 |5||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
+| RB175 | 2 Handling Requests manually|3.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/02_handling_requests_manually.md)|
+| RB130 | 3 Packaging code into a project| 4.2.24| [here](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md)|
+| RB175 |3 Working with Sinatra|8.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md)|
+| RB175 |4 Deploying Sinatra Applications|15.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)|
+| RB175 |5 Project Todos (THIS CAN BE A TEMPLATE FOR YOU PRESENTATION)||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
 | RB175 |6||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
 | RB175 |7||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)|
 | RB175 |8||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
@@ -103,9 +104,19 @@ I reviewed:
 
 
 ### Writing ERB code
+
+- https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3
+- https://launchschool.com/lessons/c3578b91/assignments/d6969b5b
+
 ### Using view variables and helpers
+
 ### Using and writing routes
+
+- I should have put the `require_signed_in_user` method in the before block rather than at the beginning of every GET method. Because before blocks are for things that should be run before every request to an application (Say this?)
+
 ### Sessions and persistence
+
+- You enable sessions, but only for flash messages.
 ### Using SQL
 ### Optimizing SQL queries
 ### Validation and Flash messages
@@ -133,4 +144,14 @@ I reviewed:
 18 minutes : Me giving the assessor a walk through on my gym app via zoom, with a 3 slides minimum PowerPoint presentation!
 15 minutes : The assessor asking me to explain concepts covered in the curriculum as they appear in my app.
 
+## Discuss with Olly:
 
+- Should I talk about the mistakes I've caught in preparing this presentation?
+  - Procfile
+  - `require_signed_in_user` not in before block.
+  - neglecting to use the `not_found` path instead of `get/*`
+
+## other notes:
+
+- Remember, all these Sinatra commands you take for granted, like `redirect` are built-in methods.
+- Should I have added comments to my routes?
