@@ -495,6 +495,8 @@ CLI.new.run(ARGV)
 ## 15	[Clearing Expenses](https://launchschool.com/lessons/10f7102d/assignments/78571424)
 
 - Write a method `clear` which will delete all the entries in the `expenses` table.
+- NB: the method is called `delete_all_expenses`, which clearly describes its acrtion. But the user-command is `clear`. So it's conventional for a program's entrails to be different from its extrails. Esp. for CLI commands where brief commands are preferable.
+- `IO#getch` - like `gets` but for a single char.
 
 ```
 require "io/console"
@@ -550,6 +552,8 @@ and
 ```
 ## 17	[Creating the Schema Automatically](https://launchschool.com/lessons/10f7102d/assignments/99b9d97f)
 
+- `information_schema.tables`
+
 ```sql
  def setup_schema
     result = @connection.exec <<~SQL
@@ -575,6 +579,6 @@ and
 - `pg` for:
   - creating a new `PG::Connection` object
   - Executing SQL statements using `#exec` and `#exec_params`
-  - Accessubg query results contained in `PG::result` object.
+  - Accessing query results contained in `PG::result` object.
 - Build a small command-line Ruby application
 - Automatically create tables if they don't exist.
