@@ -92,13 +92,11 @@ I reviewed:
 | RB130 | 3 Packaging code into a project| 4.2.24| [here](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md)|
 | RB175 |3 Working with Sinatra|8.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md)|
 | RB175 |4 Deploying Sinatra Applications|15.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)|
-| RB175 |5 Project Todos (THIS CAN BE A TEMPLATE FOR YOU PRESENTATION)||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
-| RB175 |6||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
-| RB175 |7||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)|
-| RB175 |8||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
-| RB175 |9||[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/09_optional_projects.md)|
-| RB185 |1||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md)|
-| RB185 |2||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L2_database_backed_web_applications.md)|
+| RB175 |5 Project Todos (THIS CAN BE A TEMPLATE FOR YOU PRESENTATION)|17.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
+| RB175 |6|Securing Applications|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
+| RB175 |8|CMS project|21.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
+| RB185 |1|Interacting with a database in code|21.2.24|[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md)|
+| RB185 |2|Database backed web applications||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L2_database_backed_web_applications.md)|
 | RB185 |3||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L3_optimisation.md)|
 
 
@@ -126,6 +124,7 @@ I reviewed:
 ### Using redirects properly
 ### Maintaining state
 ### Understand and know how to mitigate security risks that can affect HTTP and SQL
+https://launchschool.com/lessons/31df6daa/assignments/d98e4174
 ### Procfiles (It shouldn't have been there, but it was)
 
 ## Questions:
@@ -155,3 +154,8 @@ I reviewed:
 
 - Remember, all these Sinatra commands you take for granted, like `redirect` are built-in methods.
 - Should I have added comments to my routes?
+- This [link](https://launchschool.com/lessons/9230c94c/assignments/7d7b4dd7) covers the following:
+  - why we prevent the sinatra reloader during development
+  - How/why we add puma gem, but only in production
+  - What's up with the config.ru file
+  - What's up with the Procfile
