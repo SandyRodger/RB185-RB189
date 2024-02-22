@@ -10,6 +10,8 @@
 -video [4:44]
 - It works, but it's inefficient.
 - N + 1 query
+  - The total number of queries performed is equal to the number of queries on the page plus 1.
+  - It's where an application issues one query to retrieve data for a parent record, and then an additional query for each child record associated with that parent.
 - Using the most general purpose methods you can at first and then coming back to optimise.
 - Minimise the number of SQL queries being made to the db.
 
@@ -24,7 +26,7 @@
 - `NULLIF`
 - consistent `count` methods.
 - Preventing work happening behind the scenes which won't ever be necessary.
-- Start general wioth SQL queries, this makes it easier to build forward. Then later come back and change the code.
+- Start general with SQL queries, this makes it easier to build forward. Then later come back and change the code.
 
 ## [Pushing Down Operations to the Database](https://launchschool.com/lessons/ce10b313/assignments/bb9d2366)
 
@@ -49,4 +51,5 @@
 
 ## [Quiz](https://launchschool.com/lessons/ce10b313/assignments/465e198a)
 
-- 
+- 100%
+- review 22.2.24 100% 
