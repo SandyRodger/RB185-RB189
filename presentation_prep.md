@@ -28,6 +28,7 @@ Using view variables and helpers
 Using and writing routes
 Sessions and persistence
 Using SQL
+  - designing a schema: https://launchschool.com/lessons/421e2d1e/assignments/e3e8c87e
 Optimizing SQL queries
 Validation and Flash messages
 Using static assets
@@ -86,17 +87,17 @@ The presentation itself should be 15-20 minutes, but there maybe another 10-20 m
 I reviewed:
 
 | Course | Lesson | when finished | link |
-| :---: | :---: | :---: | :---: |
+| :---: | :--- | :---: | :---: |
 | RB175 | 1 Intro and prerequisites| 3.2.24 |[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md )|
 | RB175 | 2 Handling Requests manually|3.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/02_handling_requests_manually.md)|
 | RB130 | 3 Packaging code into a project| 4.2.24| [here](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md)|
 | RB175 |3 Working with Sinatra|8.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md)|
 | RB175 |4 Deploying Sinatra Applications|15.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)|
 | RB175 |5 Project Todos (THIS CAN BE A TEMPLATE FOR YOU PRESENTATION)|17.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)|
-| RB175 |6|Securing Applications|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
-| RB175 |8|CMS project|21.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
-| RB185 |1|Interacting with a database in code|21.2.24|[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md)|
-| RB185 |2|Database backed web applications||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L2_database_backed_web_applications.md)|
+| RB175 |6 Securing Applications|21.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)|
+| RB175 |8 CMS project|21.2.24|[here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)|
+| RB185 |1 Interacting with a database in code|21.2.24|[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L1_interacting_with_a_database_in_code.md)|
+| RB185 |2 Database backed web applications||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L2_database_backed_web_applications.md)|
 | RB185 |3||[here](https://github.com/SandyRodger/RB185-RB189/blob/main/L3_optimisation.md)|
 
 
@@ -116,7 +117,9 @@ I reviewed:
 
 - You enable sessions, but only for flash messages.
 ### Using SQL
-### Optimizing SQL queries
+Safely handle inserting parameters into SQL statements with PG::Connection#exec_params.
+### Optimizing SQL queries (https://launchschool.com/lessons/ce10b313/assignments/bf18ccc5)
+- "I joined these tables to minimise queries needed"
 ### Validation and Flash messages
 ### Using static assets
 ### Working with the request/response cycle
@@ -149,6 +152,17 @@ https://launchschool.com/lessons/31df6daa/assignments/d98e4174
   - Procfile
   - `require_signed_in_user` not in before block.
   - neglecting to use the `not_found` path instead of `get/*`
+  - Should have included `also reload` - Oh actually. I should have made it reload only in a development environment.
+  - The following way to connect to he database is only necessary in Heroku. To tell it which database to use:
+```
+    @db = if Sinatra::Base.production?
+            PG.connect(ENV['DATABASE_URL'])
+          else
+            PG.connect(dbname: 'my_gym')
+          end
+```
+  - Same for db.disconnect ?
+
 
 ## other notes:
 
