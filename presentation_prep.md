@@ -12,31 +12,31 @@ Note that the requirements for the presentation will be given to you as part of 
 
 The assessment project will test your knowledge of the concepts required to build WEB-based applications using Ruby, Sinatra, ERB, and PostgreSQL. The project is generally free form but with certain minimal behaviors and features. We will describe those when you start the project. At a minimum, you should be ready to:
 
-write a Ruby application using Sinatra
-write enough ERB code to display your application in a browser. Your ERB code will likely be less complex than that used in the RB175/RB185 projects. You may need to learn some HTML via LS202 before starting the project. We will not grade your ERB code other than checking that it works.
-create Gemfile and Gemfile.lock files so your grader can run the code on their system
-provide the SQL needed to create and seed any databases you require.
-you do not need CSS if you do not want to use it. We do not require a pretty application for this project.
-save your project in a zip file and upload it after completing the project
-You will receive additional information and requirements once you start the project.
+- write a Ruby application using Sinatra
+- write enough ERB code to display your application in a browser. Your ERB code will likely be less complex than that used in the RB175/RB185 projects. You may need to learn some HTML via LS202 before starting the project. We will not grade your ERB code other than checking that it works.
+- create Gemfile and Gemfile.lock files so your grader can run the code on their system
+- provide the SQL needed to create and seed any databases you require.
+- you do not need CSS if you do not want to use it. We do not require a pretty application for this project.
+- save your project in a zip file and upload it after completing the project
+- You will receive additional information and requirements once you start the project.
 
-Important Topics You Need to Study:
+### Important Topics You Need to Study:
 
-Writing Sinatra applications
-Writing ERB code
-Using view variables and helpers
-Using and writing routes
-Sessions and persistence
-Using SQL
+- Writing Sinatra applications
+- Writing ERB code
+- Using view variables and helpers
+- Using and writing routes
+- Sessions and persistence
+- Using SQL
   - designing a schema: https://launchschool.com/lessons/421e2d1e/assignments/e3e8c87e
-Optimizing SQL queries
-Validation and Flash messages
-Using static assets
-Working with the request/response cycle
-Know how and when to use GET and POST requests correctly
-Using redirects properly
-Maintaining state
-Understand and know how to mitigate security risks that can affect HTTP and SQL
+- Optimizing SQL queries
+- Validation and Flash messages
+- Using static assets
+- Working with the request/response cycle
+- Know how and when to use GET and POST requests correctly
+- Using redirects properly
+- Maintaining state
+- Understand and know how to mitigate security risks that can affect HTTP and SQL
 
 ## [4. Project]
 
@@ -128,7 +128,6 @@ Safely handle inserting parameters into SQL statements with PG::Connection#exec_
 ### Maintaining state
 ### Understand and know how to mitigate security risks that can affect HTTP and SQL
 https://launchschool.com/lessons/31df6daa/assignments/d98e4174
-### Procfiles (It shouldn't have been there, but it was)
 
 ## Questions:
 
@@ -149,20 +148,6 @@ https://launchschool.com/lessons/31df6daa/assignments/d98e4174
 ## Discuss with Olly:
 
 - Should I talk about the mistakes I've caught in preparing this presentation?
-  - Procfile
-  - `require_signed_in_user` not in before block.
-  - neglecting to use the `not_found` path instead of `get/*`
-  - Should have included `also reload` - Oh actually. I should have made it reload only in a development environment.
-  - The following way to connect to he database is only necessary in Heroku. To tell it which database to use:
-```
-    @db = if Sinatra::Base.production?
-            PG.connect(ENV['DATABASE_URL'])
-          else
-            PG.connect(dbname: 'my_gym')
-          end
-```
-  - Same for db.disconnect ?
-
 
 ## other notes:
 
