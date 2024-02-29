@@ -307,4 +307,6 @@ Can you think of any improvements you could make?
   - So you're not breaking old things with new things
 - Practice more
   - I seemed like I hadn't practiced enough
-- 
+- I went over-time
+- I presented the code when I should have presented the app
+- I wasn't fluent with screen-sharing on Slack and made mistakes and fumbled.
