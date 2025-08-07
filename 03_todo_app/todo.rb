@@ -1,7 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "sinatra/content_for"
-require "tilt/erubis"
+require "tilt/erubi"
 
 # require_relative "public/session_persistence"
 require_relative "database_persistence"
